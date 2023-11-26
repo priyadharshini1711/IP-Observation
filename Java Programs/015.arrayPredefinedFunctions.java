@@ -132,7 +132,9 @@ class Main {
     );
   }
 }
+
 /*
+output
 1. To convert the elements as List
 Integer Array as List: [[I@60215eee]
 
