@@ -24,7 +24,7 @@ class Main extends Parent1, Parent2 {
         Test t = new Test();
 
         t.fun();
-        // throws error as java doesnt support multiple Inheritance
+        // throws error as java doesn't support multiple Inheritance
     }
 }
 
