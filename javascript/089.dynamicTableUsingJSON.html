@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table using JSON</title>
+    <style>
+        table,
+        th {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let data = [
+            {
+                "name": "alex",
+                "age": 21,
+                "marks": 34
+            },
+            {
+                "name": "hari",
+                "age": 24,
+                "marks": 55
+            },
+            {
+                "name": "ben",
+                "age": 23,
+                "marks": 60
+            }
+        ]
+        document.writeln("Table")
+        document.writeln("<br><br><br>")
+        var t = document.createElement("TABLE")
+        var i, j;
+        header = Object.keys(data[0]);
+        console.log(header)
+        for (i = 0; i < header.length; i++) {
+            var th = document.createElement("TH")
+            var txt = document.createTextNode(header[i])
+            th.append(txt)
+            t.append(th)
+
+        }
+        for (i = 0; i < data.length; i++) {
+            var tr = document.createElement("TR")
+            for (j = 0; j < header.length; j++) {
+                var td = document.createElement("TD")
+                var txt = document.createTextNode(data[i][header[j]])
+                td.append(txt)
+                tr.append(td)
+            }
+            t.append(tr)
+        }
+        document.body.appendChild(t);
+    </script>
+</body>
+</html>

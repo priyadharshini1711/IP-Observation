@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var x = document.createElement("LABEL")
+    var t = document.createTextNode("number 1");
+    x.appendChild(t);
+    document.body.appendChild(x);
+    var y = document.createElement("INPUT")
+    y.setAttribute("type", "text")
+    y.setAttribute("id", "num1")
+    document.body.appendChild(y);
+
+    document.write("<br><br>")
+
+    var x = document.createElement("LABEL")
+    var t = document.createTextNode("number 2");
+    x.appendChild(t);
+    document.body.appendChild(x);
+    var y = document.createElement("INPUT")
+    y.setAttribute("type", "text")
+    y.setAttribute("id", "num2")
+    document.body.appendChild(y);
+
+    document.write("<br><br>")
+
+    var add = document.createElement("BUTTON");
+    var t = document.createTextNode("ADD");
+    add.appendChild(t);
+    document.body.appendChild(add);
+
+    add.addEventListener('click', onAddClick);
+
+    function onAddClick() {
+        let val1 = parseInt(document.getElementById("num1").value)
+        let val2 = parseInt(document.getElementById("num2").value)
+        alert('Sum : ' + (val1 + val2));
+    }
+
+    document.write("<br><br>")
+
+    var add = document.createElement("BUTTON");
+    var t = document.createTextNode("SUB");
+    add.appendChild(t);
+    document.body.appendChild(add);
+
+    add.addEventListener('click', onSubClick);
+
+    function onSubClick() {
+        let val1 = parseInt(document.getElementById("num1").value)
+        let val2 = parseInt(document.getElementById("num2").value)
+        alert('Sub : ' + (val1 - val2));
+    }
+
+    document.write("<br><br>")
+
+    var add = document.createElement("BUTTON");
+    var t = document.createTextNode("MUL");
+    add.appendChild(t);
+    document.body.appendChild(add);
+
+    add.addEventListener('click', onMulClick);
+
+    function onMulClick() {
+        let val1 = parseInt(document.getElementById("num1").value)
+        let val2 = parseInt(document.getElementById("num2").value)
+        alert('Mul : ' + (val1 * val2));
+    }
+
+    document.write("<br><br>")
+
+    var add = document.createElement("BUTTON");
+    var t = document.createTextNode("DIV");
+    add.appendChild(t);
+    document.body.appendChild(add);
+
+    add.addEventListener('click', onDivClick);
+
+    function onDivClick() {
+        let val1 = parseInt(document.getElementById("num1").value)
+        let val2 = parseInt(document.getElementById("num2").value)
+        alert('Div : ' + (val1 / val2));
+    }
+
+    document.write("<br><br>")
+
+</script>
+
+</html>

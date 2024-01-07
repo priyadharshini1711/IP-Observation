@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function As Object</title>
+</head>
+
+<body>
+</body>
+<script>
+    var math = {
+        fact: 1,
+        factorial: function (num) {
+            this.fact = 1
+            while (num > 1) {
+                this.fact = this.fact * num
+                --num
+            }
+            return this.fact
+        }
+    }
+    document.writeln("factorial of 5 is  : " + math.factorial(5))
+    document.write("<br>")
+    document.writeln("factorial of 8 is  : " + math.factorial(8))
+</script>
+
+</html>

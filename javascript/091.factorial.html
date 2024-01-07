@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+
+<body>
+    <script>
+        function factorial(x) {
+            var fact = 1
+            while (x > 1) {
+                fact = fact * x
+                --x;
+            }
+            return fact
+        }
+        document.writeln("enter a value")
+        document.writeln("<br>")
+        var value = window.prompt("value")
+        document.writeln("value : " + value)
+        var f = factorial(parseInt(value))
+        document.writeln("<br>")
+        document.writeln("factorial : " + f)
+    </script>
+</body>
+
+</html>

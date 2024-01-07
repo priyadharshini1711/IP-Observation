@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest of three numbers</title>
+</head>
+
+<body>
+    <script>
+        var a = window.prompt("enter value of a")
+        var b = window.prompt("enter value of b")
+        var c = window.prompt("enter value of c")
+        var x, y, z
+        x = parseInt(a)
+        y = parseInt(b)
+        z = parseInt(c)
+        document.write("values of a, b and c are : ")
+        document.writeln(a)
+        document.writeln(b)
+        document.writeln(c)
+        if (a > b && a > c) {
+            document.write("<br> greatest number : " + a)
+        } else if (b > c) {
+            document.write("<br> greatest number : " + b)
+        } else {
+            document.write("<br> greatest number : " + c)
+        }
+
+    </script>
+</body>
+
+</html>
+
+<!--
+values of a, b and c are : 2 1 3
+greatest number : 3
+-->

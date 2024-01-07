@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+
+<body>
+    <script>
+        function fibonacci(x) {
+            var a = -1, b = 1
+            for(let i = 0;i<x;i++){
+                var t = a + b
+                a = b
+                b = t
+                document.writeln("<br>")
+                document.writeln(t)                
+            }
+        }
+        document.writeln("enter a value")
+        document.writeln("<br>")
+        var value = window.prompt("value")
+        document.writeln("value : " + value)
+        fibonacci(parseInt(value))
+        document.writeln("<br>")
+    </script>
+</body>
+
+</html>

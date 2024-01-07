@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+
+<body>
+    <script>
+        function Armstrong(x) {
+            var y = x
+            let number = 0
+            while (x > 0) {
+                let digit = x%10
+                number = number + parseInt(Math.pow(digit,3))
+                x = parseInt(x / 10)
+            }
+            document.writeln("<br>")
+            if (y == number)
+                document.writeln("armstrong number")
+            else
+                document.writeln("not armstrong number")
+        }
+        document.writeln("enter a value")
+        document.writeln("<br>")
+        var value = window.prompt("value")
+        document.writeln("value : " + value)
+        Armstrong(parseInt(value))
+        document.writeln("<br>")
+    </script>
+</body>
+
+</html>

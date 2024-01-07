@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Array</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var matrix = []
+    document.write("matrix values")
+    document.write("<br>")
+    var rows = window.prompt("enter the number of rows")
+    for (let i = 0; i < rows; i++) {
+        var matrix_row = []
+        var columns = window.prompt("enter the dimension of the row")
+        for (let j = 0; j < columns; j++) {
+            var item = window.prompt("enter the items i and j : " + i + " , " + j)
+            matrix_row.push(item)
+        }
+        matrix.push(matrix_row)
+        document.write("<br>")
+    }
+    matrix.forEach((item, index) => {
+        item.forEach((item1, index) => {
+            document.write(item1, " ")
+        })
+        document.writeln("<br>")
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and Display Array</title>
+</head>
+
+<body>
+    <script>
+        var a = []
+        let num = window.prompt("enter the number of elements of array")
+        document.writeln("num of elements: " + num)
+        document.writeln("<br>")
+        for (let i = 0; i < num; i++) {
+            var x = window.prompt("enter the value of array at i " + i)
+            a.push(x)
+        }
+        a.forEach(element => {
+            document.writeln(element)
+            document.writeln("<br>")
+        });
+    </script>
+</body>
+
+</html>

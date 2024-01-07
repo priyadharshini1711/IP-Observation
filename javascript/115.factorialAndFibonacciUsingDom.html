@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var x = document.createElement("LABEL")
+    var t = document.createTextNode("factorial");
+    x.appendChild(t);
+    document.body.appendChild(x);
+    var y = document.createElement("INPUT")
+    y.setAttribute("type", "text")
+    y.setAttribute("id", "num1")
+    document.body.appendChild(y);
+
+    document.write("<br><br>")
+
+    var x = document.createElement("LABEL")
+    var t = document.createTextNode("fibonacci digits");
+    x.appendChild(t);
+    document.body.appendChild(x);
+    var y = document.createElement("INPUT")
+    y.setAttribute("type", "text")
+    y.setAttribute("id", "num2")
+    document.body.appendChild(y);
+
+    document.write("<br><br>")
+
+    var fact = document.createElement("BUTTON");
+    var t = document.createTextNode("Factorial");
+    fact.appendChild(t);
+    document.body.appendChild(fact);
+
+    fact.addEventListener('click', onFactorialClick);
+
+    function onFactorialClick() {
+        let val1 = parseInt(document.getElementById("num1").value)
+        let fact = 1
+        while (val1 > 1) {
+            fact = fact * val1
+            val1--;
+        }
+        alert('Factorial : ' + (fact));
+    }
+
+    document.write("<br><br>")
+
+    var fib = document.createElement("BUTTON");
+    var t = document.createTextNode("FIBONACCI");
+    fib.appendChild(t);
+    document.body.appendChild(fib);
+
+    fib.addEventListener('click', onFibonacciClick);
+
+    function onFibonacciClick() {
+        let val2 = parseInt(document.getElementById("num2").value)
+        let a = -1
+        let b = 1
+        let c = 0
+        let txt = ""
+        console.log("sample", val2)
+        while (val2 > 0) {
+            c = a + b
+            a = b
+            b = c
+            txt = txt + c + "  "
+            val2--;
+        }
+        alert('Fibonacci : ' + (txt));
+    }
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table</title>
+    <style>
+        table,
+        th {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        
+        document.writeln("Table")
+        document.writeln("<br><br><br>")
+        var columns = window.prompt("enter columns")
+        var rows = window.prompt("enter rows")
+        var i,j;
+        var header = []
+        var data = []
+        for(i=0;i<columns;i++){
+            var col = window.prompt("enter the column names")
+            header.push(col.toString())
+        }
+        for(i=0;i<rows;i++){
+            var data_new = {}
+            for(j=0;j<columns;j++){
+                var row_new = window.prompt("enter the row values for "+header[j])
+                data_new[header[j]] = row_new
+            }
+            data.push(data_new)
+        }
+        var t = document.createElement("TABLE")
+        // var i, j;
+        header = Object.keys(data[0]);
+        console.log(header, data)
+        for (i = 0; i < header.length; i++) {
+            var th = document.createElement("TH")
+            var txt = document.createTextNode(header[i])
+            th.append(txt)
+            t.append(th)
+
+        }
+        for (i = 0; i < data.length; i++) {
+            var tr = document.createElement("TR")
+            for (j = 0; j < header.length; j++) {
+                var td = document.createElement("TD")
+                var txt = document.createTextNode(data[i][header[j]])
+                td.append(txt)
+                tr.append(td)
+            }
+            t.append(tr)
+        }
+        document.body.appendChild(t);
+    </script>
+</body>
+</html>

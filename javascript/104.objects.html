@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var details = new Object()
+
+    function auto(name, m1, m2, m3) {
+        this.name = name
+        this.m1 = m1
+        this.m2 = m2
+        this.m3 = m3
+        this.total = function () {
+            var sum = this.m1 + this.m2 + this.m3
+            return this.name + " has scored total of " + sum
+        }
+    }
+    var student1 = new auto("abc", 20, 30, 40)
+    var student2 = new auto("def", 30, 80, 70)
+    document.write(student1.total())
+    document.writeln("<br>")
+    document.write(student2.total())
+</script>
+
+</html>

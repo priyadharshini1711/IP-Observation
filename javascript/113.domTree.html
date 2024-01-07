@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="printDOM()">Print DOM</button>
+    <p id="demo"></p>
+    <div>
+        <a></a>
+    </div>
+
+
+</body>
+<script>
+    function printDOM() {
+        console.log(document.getElementsByTagName('body'))
+
+
+        const nodeList = document.body.childNodes;
+
+        let text = "";
+        for (let i = 0; i < nodeList.length; i++) {
+            text += nodeList[i].nodeName + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+
+    }
+</script>
+
+</html>

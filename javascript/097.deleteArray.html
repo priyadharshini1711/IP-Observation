@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and Display Array</title>
+</head>
+
+<body>
+    <script>
+        var a = []
+        let num = window.prompt("enter the number of elements of array")
+        document.writeln("num of elements: " + num)
+        document.writeln("<br>")
+        for (let i = 0; i < num; i++) {
+            var x = window.prompt("enter the value of array at i " + i)
+            a.push(x)
+        }
+        a.forEach(element => {
+            document.writeln(element)
+            document.writeln("<br>")
+        });
+
+        let n = -1;
+
+
+        document.writeln("<br>")
+        document.writeln("<br>")
+        let y = window.prompt("enter number to delete")
+
+        a.forEach((element, index) => {
+            if (element === y) {
+                document.writeln("element " + y + " found at index : " + index)
+                n = index
+            }
+        });
+
+        delete a[n]
+        document.writeln("<br>")
+        document.writeln("after deletion")
+        document.writeln("<br>")
+        a.forEach(element => {
+            document.writeln(element)
+            document.writeln("<br>")
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="123"></div>
+    <div id="456"></div>
+    
+</body>
+<script>
+    initial()
+    function initial(){
+        var a = new Array(5)
+        result(a, "String Value", "123")
+        result(a, "Integer Value", 456)
+    }
+
+    function result(a, head, id1){
+        for(let i =0;i<a.length;i++){
+            a[i] = window.prompt("enter the value at index "+i)
+        }
+        var temp = document.getElementById(id1)
+        final(head, temp, a)
+    }
+
+    function final(head, temp, a){
+        var i;
+        var output = "<h1>"+head+"</h1>"
+        for(i=0;i<a.length;i++){
+            output = output + "<br>" + a[i]
+        }
+        temp.innerHTML = output
+    }
+</script>
+</html>
