@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>The Element Object</h1>
+    <h2>The remove() Method</h2>
+
+    <p id="demo">Click "Remove", and this paragraph will be removed from the DOM.</p>
+    <button onclick="myFunction1()">Remove</button>
+
+    <h1>The Element Object</h1>
+    <h2>The appendChild() Method</h2>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+
+    <p>Click "Append" to append an item to the end of the list:</p>
+
+    <button onclick="myFunction()">Append</button>
+
+    <script>
+        function myFunction1() {
+            const element = document.getElementById("demo");
+            element.remove();
+        }
+
+        function myFunction() {
+            const node = document.createElement("li");
+            const textnode = document.createTextNode("Water");
+            node.appendChild(textnode);
+            document.getElementById("myList").appendChild(node);
+        }
+    </script>
+
+</body>
+
+
+</html>
