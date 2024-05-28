@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content= 
+		"width=device-width, initial-scale=1.0"> 
+	<title>Anonymous Callback Function in AJAX</title> 
+
+	<script> 
+		function loadInformation() { 
+
+			// Request 
+			var request = new XMLHttpRequest(); 
+			request.open("GET", "./data.json"); 
+			request.send(); 
+
+			// Response 
+			request.onreadystatechange = function () { 
+				if (this.readyState == 4 
+					&& this.status == 200) { 
+					document.getElementById("container") 
+						.innerHTML = this.responseText; 
+				} 
+			} 
+		} 
+	</script> 
+</head> 
+
+<body> 
+	<div style="text-align: center;"> 
+		<h1 style="color:green;"> 
+			GeeksforGeeks 
+		</h1> 
+		
+		<h3>Anonymous Callback function in AJAX</h3> 
+		
+		<button onClick="loadInformation()"> 
+			Click to Load 
+		</button> 
+		<br /><br /> 
+		
+		<div id="container"></div> 
+	</div> 
+</body> 
+
+</html>
